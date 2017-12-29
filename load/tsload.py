@@ -1,4 +1,5 @@
 import tushare as ts
+import load.sqlitelib as sqlitelib
 
 class TsLoad(object):
     def __init__(self):
@@ -9,6 +10,8 @@ class TsLoad(object):
 
         stocks = ts.get_stock_basics('2016-08-29')
         print(stocks)
+
+        db = sqlitelib.Database()
 
     def test(self):
 
