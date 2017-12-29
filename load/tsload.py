@@ -6,6 +6,7 @@ class TsLoad(object):
         self.__cons__ = ts.get_apis()
 
     def loadStockBasics(self):
+
         stocks = ts.get_stock_basics('2016-08-29')
         print(stocks)
 
@@ -43,6 +44,7 @@ class TsLoad(object):
         df = ts.tick('600000', conn=self.__cons__, date='2017-10-26')
         print(df.head(20))
         #数据里没有增加代码一列，如果有需要可以同多df[‘code’] = code实现。
+
 
 if __name__=='__main__':
     loader = TsLoad()
