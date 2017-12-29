@@ -5,7 +5,7 @@ class TsLoad(object):
         # 获取连接备用
         self.__cons__ = ts.get_apis()
 
-    def getStockBasics(self):
+    def loadStockBasics(self):
         stocks = ts.get_stock_basics('2016-08-29')
         print(stocks)
 
